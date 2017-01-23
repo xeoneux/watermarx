@@ -1,15 +1,21 @@
 PODS:
   - ALCameraViewController (1.2.7)
+  - FTImageViewer (2.0.1):
+    - Kingfisher
+  - Kingfisher (3.3.1)
   - Sharaku (1.0.2)
 
 DEPENDENCIES:
   - ALCameraViewController
+  - FTImageViewer
   - Sharaku
 
 SPEC CHECKSUMS:
   ALCameraViewController: 4a513b8d5ecfdb3f34c50b1d469c373aae1ec7b4
+  FTImageViewer: bb32a6efb11348b78ac832f0132a00f91e5b7b45
+  Kingfisher: 4d943445768c60fe5de314619a8ab07ec761ae5b
   Sharaku: c18de569fc99f6e936f46ca812b571826cc658a7
 
-PODFILE CHECKSUM: e7e7a0bd144e2b2062a0e160aef0c275dc61f1e9
+PODFILE CHECKSUM: 330ec4c12bb11d6e891fbf4bcf569c1fc6bce02f
 
 COCOAPODS: 1.1.1

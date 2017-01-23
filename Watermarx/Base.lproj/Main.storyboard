@@ -26,8 +26,12 @@
                                     <action selector="cameraButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="k5y-u3-76S"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DYT-XQ-iP0" customClass="FTImageGridView" customModule="FTImageViewer">
+                                <rect key="frame" x="16" y="72" width="343" height="557"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="adx-R9-ALG" secondAttribute="bottom" constant="8" id="CyG-FV-x88"/>
                             <constraint firstItem="adx-R9-ALG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yf1-n3-4kb"/>
@@ -36,6 +40,7 @@
                     <navigationItem key="navigationItem" title="Watermarx" id="Roj-SP-qwq"/>
                     <connections>
                         <outlet property="cameraButton" destination="adx-R9-ALG" id="lFA-ea-mOb"/>
+                        <outlet property="imageGridView" destination="DYT-XQ-iP0" id="nTd-y4-doU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
