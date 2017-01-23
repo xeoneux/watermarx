@@ -7,6 +7,7 @@
 //
 
 import Fusuma
+import Sharaku
 import UIKit
 
 class IntroViewController: UIViewController {
@@ -33,7 +34,7 @@ class IntroViewController: UIViewController {
         let fusuma = FusumaViewController()
         fusuma.delegate = self
         fusuma.hasVideo = false
-        present(fusuma, animated: false)
+        present(fusuma, animated: true)
     }
 }
 
@@ -41,7 +42,9 @@ class IntroViewController: UIViewController {
 
 extension IntroViewController: FusumaDelegate {
     func fusumaImageSelected(_ image: UIImage, source: FusumaMode) {
-
+        let viewController = SHViewController(image: image)
+        viewController.delegate = self
+        navigationController?.pushViewController(viewController, animated: true)
     }
 
     func fusumaDismissedWithImage(_ image: UIImage, source: FusumaMode) {
@@ -53,6 +56,16 @@ extension IntroViewController: FusumaDelegate {
     }
 
     func fusumaCameraRollUnauthorized() {
+
+    }
+}
+
+extension IntroViewController: SHViewControllerDelegate {
+    func shViewControllerImageDidFilter(image: UIImage) {
+
+    }
+
+    func shViewControllerDidCancel() {
 
     }
 }
