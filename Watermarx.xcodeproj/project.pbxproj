@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		84F1090E1E35C48A00DB28B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F1090D1E35C48A00DB28B4 /* AppDelegate.swift */; };
-		84F109101E35C48A00DB28B4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F1090F1E35C48A00DB28B4 /* ViewController.swift */; };
+		84F109101E35C48A00DB28B4 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F1090F1E35C48A00DB28B4 /* IntroViewController.swift */; };
 		84F109131E35C49100DB28B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84F109111E35C49100DB28B4 /* Main.storyboard */; };
 		84F109151E35C49100DB28B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84F109141E35C49100DB28B4 /* Assets.xcassets */; };
 		84F109181E35C49100DB28B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84F109161E35C49100DB28B4 /* LaunchScreen.storyboard */; };
@@ -19,7 +19,7 @@
 		299057E258B23C29E1364199 /* Pods-Watermarx.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Watermarx.release.xcconfig"; path = "Pods/Target Support Files/Pods-Watermarx/Pods-Watermarx.release.xcconfig"; sourceTree = "<group>"; };
 		84F1090A1E35C48A00DB28B4 /* Watermarx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Watermarx.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84F1090D1E35C48A00DB28B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		84F1090F1E35C48A00DB28B4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		84F1090F1E35C48A00DB28B4 /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		84F109121E35C49100DB28B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		84F109141E35C49100DB28B4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84F109171E35C49100DB28B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -57,13 +57,31 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		84BA17121E35C85D00063BEF /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				84F1090D1E35C48A00DB28B4 /* AppDelegate.swift */,
+				84F109191E35C49100DB28B4 /* Info.plist */,
+				84F109161E35C49100DB28B4 /* LaunchScreen.storyboard */,
+			);
+			path = Misc;
+			sourceTree = "<group>";
+		};
+		84BA17131E35C89A00063BEF /* Intro */ = {
+			isa = PBXGroup;
+			children = (
+				84F1090F1E35C48A00DB28B4 /* IntroViewController.swift */,
+			);
+			path = Intro;
+			sourceTree = "<group>";
+		};
 		84F109011E35C48A00DB28B4 = {
 			isa = PBXGroup;
 			children = (
-				84F1090C1E35C48A00DB28B4 /* Watermarx */,
-				84F1090B1E35C48A00DB28B4 /* Products */,
-				5AD7DD999720A5E903128E74 /* Pods */,
 				0B9AFD3276F6B94B573D46CD /* Frameworks */,
+				5AD7DD999720A5E903128E74 /* Pods */,
+				84F1090B1E35C48A00DB28B4 /* Products */,
+				84F1090C1E35C48A00DB28B4 /* Watermarx */,
 			);
 			sourceTree = "<group>";
 		};
@@ -78,12 +96,10 @@
 		84F1090C1E35C48A00DB28B4 /* Watermarx */ = {
 			isa = PBXGroup;
 			children = (
-				84F1090D1E35C48A00DB28B4 /* AppDelegate.swift */,
-				84F1090F1E35C48A00DB28B4 /* ViewController.swift */,
-				84F109111E35C49100DB28B4 /* Main.storyboard */,
+				84BA17131E35C89A00063BEF /* Intro */,
+				84BA17121E35C85D00063BEF /* Misc */,
 				84F109141E35C49100DB28B4 /* Assets.xcassets */,
-				84F109161E35C49100DB28B4 /* LaunchScreen.storyboard */,
-				84F109191E35C49100DB28B4 /* Info.plist */,
+				84F109111E35C49100DB28B4 /* Main.storyboard */,
 			);
 			path = Watermarx;
 			sourceTree = "<group>";
@@ -211,7 +227,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84F109101E35C48A00DB28B4 /* ViewController.swift in Sources */,
+				84F109101E35C48A00DB28B4 /* IntroViewController.swift in Sources */,
 				84F1090E1E35C48A00DB28B4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -225,6 +241,7 @@
 				84F109121E35C49100DB28B4 /* Base */,
 			);
 			name = Main.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 		84F109161E35C49100DB28B4 /* LaunchScreen.storyboard */ = {
@@ -233,6 +250,7 @@
 				84F109171E35C49100DB28B4 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -376,6 +394,7 @@
 				84F1091E1E35C49100DB28B4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

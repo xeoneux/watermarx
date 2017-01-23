@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  IntroViewController.swift
 //  Watermarx
 //
 //  Created by Aayush Kapoor on 23/01/17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class IntroViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
