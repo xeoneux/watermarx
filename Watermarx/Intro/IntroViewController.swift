@@ -42,13 +42,13 @@ class IntroViewController: UIViewController {
 
 extension IntroViewController: FusumaDelegate {
     func fusumaImageSelected(_ image: UIImage, source: FusumaMode) {
-        let viewController = SHViewController(image: image)
-        viewController.delegate = self
-        navigationController?.pushViewController(viewController, animated: true)
+
     }
 
     func fusumaDismissedWithImage(_ image: UIImage, source: FusumaMode) {
-
+        let sharaku = SHViewController(image: image)
+        sharaku.delegate = self
+        present(sharaku, animated: true)
     }
 
     func fusumaVideoCompleted(withFileURL fileURL: URL) {

@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Intro View Controller-->
+        <!--Watermarx-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="IntroViewController" customModule="Watermarx" customModuleProvider="target" sceneMemberID="viewController">
@@ -33,7 +33,7 @@
                             <constraint firstItem="adx-R9-ALG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yf1-n3-4kb"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Roj-SP-qwq"/>
+                    <navigationItem key="navigationItem" title="Watermarx" id="Roj-SP-qwq"/>
                     <connections>
                         <outlet property="cameraButton" destination="adx-R9-ALG" id="lFA-ea-mOb"/>
                     </connections>
