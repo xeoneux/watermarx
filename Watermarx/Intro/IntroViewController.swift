@@ -6,11 +6,38 @@
 //  Copyright © 2017 Logiworks. All rights reserved.
 //
 
-import Fusuma
+import ALCameraViewController
 import Sharaku
 import UIKit
 
 class IntroViewController: UIViewController {
+
+    var firstTime = true
+    var didSetImage = false
+    var currentImage: UIImage?
+
+    var cameraViewController: CameraViewController {
+        return CameraViewController(croppingEnabled: false) { [weak self] image, asset in
+
+            if image != nil {
+                self?.didSetImage = true
+                self?.currentImage = image
+            } else {
+                self?.didSetImage = false
+                self?.currentImage = nil
+            }
+
+            self?.dismiss(animated: false, completion: {
+
+                if self!.didSetImage {
+                    let sharaku = SHViewController(image: self!.currentImage!)
+                    sharaku.delegate = self
+                    self?.present(sharaku, animated: false, completion: nil)
+                }
+                
+            })
+        }
+    }
 
     // MARK: - References
 
@@ -18,45 +45,19 @@ class IntroViewController: UIViewController {
 
     // MARK: - Lifecycle
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        if firstTime {
+            firstTime = false
+            cameraButtonTapped(self)
+        }
     }
 
     // MARK: - Actions
 
     @IBAction func cameraButtonTapped(_ sender: Any) {
-        let fusuma = FusumaViewController()
-        fusuma.delegate = self
-        fusuma.hasVideo = false
-        present(fusuma, animated: true)
-    }
-}
-
-// MARK: - Fusuma Delegate
-
-extension IntroViewController: FusumaDelegate {
-    func fusumaImageSelected(_ image: UIImage, source: FusumaMode) {
-
-    }
-
-    func fusumaDismissedWithImage(_ image: UIImage, source: FusumaMode) {
-        let sharaku = SHViewController(image: image)
-        sharaku.delegate = self
-        present(sharaku, animated: true)
-    }
-
-    func fusumaVideoCompleted(withFileURL fileURL: URL) {
-
-    }
-
-    func fusumaCameraRollUnauthorized() {
-
+        present(cameraViewController, animated: true, completion: nil)
     }
 }
 
@@ -66,7 +67,8 @@ extension IntroViewController: SHViewControllerDelegate {
     }
 
     func shViewControllerDidCancel() {
-
+        // Override dismiss method
+        present(cameraViewController, animated: false, completion: nil)
     }
 }
 

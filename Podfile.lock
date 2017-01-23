@@ -1,15 +1,15 @@
 PODS:
-  - Fusuma (1.0.2)
+  - ALCameraViewController (1.2.7)
   - Sharaku (1.0.2)
 
 DEPENDENCIES:
-  - Fusuma
+  - ALCameraViewController
   - Sharaku
 
 SPEC CHECKSUMS:
-  Fusuma: 4a1306b4cc7b7385a46865e9f64097b720db42d6
+  ALCameraViewController: 4a513b8d5ecfdb3f34c50b1d469c373aae1ec7b4
   Sharaku: c18de569fc99f6e936f46ca812b571826cc658a7
 
-PODFILE CHECKSUM: e1408524257ffee742fa4cb334121f5031bfdb4f
+PODFILE CHECKSUM: e7e7a0bd144e2b2062a0e160aef0c275dc61f1e9
 
 COCOAPODS: 1.1.1
