@@ -12,9 +12,11 @@
 		84F109131E35C49100DB28B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84F109111E35C49100DB28B4 /* Main.storyboard */; };
 		84F109151E35C49100DB28B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84F109141E35C49100DB28B4 /* Assets.xcassets */; };
 		84F109181E35C49100DB28B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84F109161E35C49100DB28B4 /* LaunchScreen.storyboard */; };
+		B15D97888E873476BA538E1B /* Pods_Watermarx.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3B6421C6A4FCD0C5C91890F /* Pods_Watermarx.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		299057E258B23C29E1364199 /* Pods-Watermarx.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Watermarx.release.xcconfig"; path = "Pods/Target Support Files/Pods-Watermarx/Pods-Watermarx.release.xcconfig"; sourceTree = "<group>"; };
 		84F1090A1E35C48A00DB28B4 /* Watermarx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Watermarx.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84F1090D1E35C48A00DB28B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84F1090F1E35C48A00DB28B4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +24,8 @@
 		84F109141E35C49100DB28B4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84F109171E35C49100DB28B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84F109191E35C49100DB28B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD41D7ADD6CA0781BAD2B817 /* Pods-Watermarx.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Watermarx.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Watermarx/Pods-Watermarx.debug.xcconfig"; sourceTree = "<group>"; };
+		D3B6421C6A4FCD0C5C91890F /* Pods_Watermarx.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Watermarx.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B15D97888E873476BA538E1B /* Pods_Watermarx.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B9AFD3276F6B94B573D46CD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D3B6421C6A4FCD0C5C91890F /* Pods_Watermarx.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5AD7DD999720A5E903128E74 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AD41D7ADD6CA0781BAD2B817 /* Pods-Watermarx.debug.xcconfig */,
+				299057E258B23C29E1364199 /* Pods-Watermarx.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		84F109011E35C48A00DB28B4 = {
 			isa = PBXGroup;
 			children = (
 				84F1090C1E35C48A00DB28B4 /* Watermarx */,
 				84F1090B1E35C48A00DB28B4 /* Products */,
+				5AD7DD999720A5E903128E74 /* Pods */,
+				0B9AFD3276F6B94B573D46CD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 84F1091C1E35C49100DB28B4 /* Build configuration list for PBXNativeTarget "Watermarx" */;
 			buildPhases = (
+				F701ADCDCF5E210A7304C0A7 /* [CP] Check Pods Manifest.lock */,
 				84F109061E35C48A00DB28B4 /* Sources */,
 				84F109071E35C48A00DB28B4 /* Frameworks */,
 				84F109081E35C48A00DB28B4 /* Resources */,
+				1F34E0A223D800F73A7F6659 /* [CP] Embed Pods Frameworks */,
+				A1288D9F1023D2B138867C73 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,6 +157,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1F34E0A223D800F73A7F6659 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Watermarx/Pods-Watermarx-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A1288D9F1023D2B138867C73 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Watermarx/Pods-Watermarx-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F701ADCDCF5E210A7304C0A7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		84F109061E35C48A00DB28B4 /* Sources */ = {
@@ -258,6 +333,7 @@
 		};
 		84F1091D1E35C49100DB28B4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AD41D7ADD6CA0781BAD2B817 /* Pods-Watermarx.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Watermarx/Info.plist;
@@ -270,6 +346,7 @@
 		};
 		84F1091E1E35C49100DB28B4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 299057E258B23C29E1364199 /* Pods-Watermarx.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Watermarx/Info.plist;
