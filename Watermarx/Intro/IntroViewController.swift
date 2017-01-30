@@ -7,7 +7,6 @@
 //
 
 import ALCameraViewController
-import FTImageViewer
 import Sharaku
 import UIKit
 
@@ -34,7 +33,7 @@ class IntroViewController: UIViewController {
                 if self!.didSetImage {
                     let sharaku = SHViewController(image: self!.currentImage!)
                     sharaku.delegate = self
-                    self?.present(sharaku, animated: false, completion: nil)
+                    self?.present(sharaku, animated: true, completion: nil)
                 }
                 
             })
@@ -43,7 +42,6 @@ class IntroViewController: UIViewController {
 
     // MARK: - References
 
-    @IBOutlet weak var imageGridView: FTImageGridView!
     @IBOutlet weak var cameraButton: UIButton!
 
     // MARK: - Lifecycle
@@ -55,30 +53,12 @@ class IntroViewController: UIViewController {
             firstTime = false
             cameraButtonTapped(self)
         }
-
-        showSavedImages()
     }
 
     // MARK: - Actions
 
     @IBAction func cameraButtonTapped(_ sender: Any) {
         present(cameraViewController, animated: true, completion: nil)
-    }
-
-    // MARK: - Misc
-
-    func showSavedImages() {
-        let array = [
-            "https://static.pexels.com/photos/6644/sea-water-ocean-waves.jpg",
-            "https://static.pexels.com/photos/6644/sea-water-ocean-waves.jpg",
-            "http://loremflickr.com/330/240",
-            "https://static.pexels.com/photos/6644/sea-water-ocean-waves.jpg",
-            "http://loremflickr.com/350/240"
-        ]
-        imageGridView.showWithImageArray(array) { (buttonsArray, buttonIndex) in
-            // in this tap block, preview images with one line of code
-            FTImageViewer.sharedInstance.showImages(array, atIndex: buttonIndex, fromSenderArray: buttonsArray)
-        }
     }
 
 }

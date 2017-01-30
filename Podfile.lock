@@ -1,21 +1,23 @@
 PODS:
   - ALCameraViewController (1.2.7)
-  - FTImageViewer (2.0.1):
-    - Kingfisher
-  - Kingfisher (3.3.1)
+  - Realm (2.4.1):
+    - Realm/Headers (= 2.4.1)
+  - Realm/Headers (2.4.1)
+  - RealmSwift (2.4.1):
+    - Realm (= 2.4.1)
   - Sharaku (1.0.2)
 
 DEPENDENCIES:
   - ALCameraViewController
-  - FTImageViewer
+  - RealmSwift
   - Sharaku
 
 SPEC CHECKSUMS:
   ALCameraViewController: 4a513b8d5ecfdb3f34c50b1d469c373aae1ec7b4
-  FTImageViewer: bb32a6efb11348b78ac832f0132a00f91e5b7b45
-  Kingfisher: 4d943445768c60fe5de314619a8ab07ec761ae5b
+  Realm: 37a5198a197598d9ec0e4d1ae2f64924c86eeb9a
+  RealmSwift: d69e431b79a41acdf14c404b868ae1c2458916e1
   Sharaku: c18de569fc99f6e936f46ca812b571826cc658a7
 
-PODFILE CHECKSUM: 330ec4c12bb11d6e891fbf4bcf569c1fc6bce02f
+PODFILE CHECKSUM: 3837df5c0f0657c66ae037f1cf7341fa999856f1
 
-COCOAPODS: 1.1.1
+COCOAPODS: 1.2.0
