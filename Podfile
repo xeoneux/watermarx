@@ -6,4 +6,5 @@ target 'Watermarx' do
   pod "FacebookShare"
   pod "RealmSwift"
   pod "Sharaku"
+  pod "SnapKit"
 end

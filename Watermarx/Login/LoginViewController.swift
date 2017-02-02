@@ -7,6 +7,7 @@
 //
 
 import FacebookLogin
+import SnapKit
 import UIKit
 
 class LoginViewController: UIViewController {
@@ -15,9 +16,15 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
 
         let loginButton = LoginButton(readPermissions: [.publicProfile])
-        loginButton.center = view.center
 
         view.addSubview(loginButton)
+
+        loginButton.snp.makeConstraints { (make) -> Void in
+            make.width.equalTo(self.view).offset(-40)
+            make.height.equalTo(44)
+            make.centerX.equalTo(self.view)
+            make.bottom.equalTo(self.view).offset(-20)
+        }
     }
 
 }
