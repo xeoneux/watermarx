@@ -1,5 +1,30 @@
 PODS:
   - ALCameraViewController (1.2.7)
+  - Bolts (1.8.4):
+    - Bolts/AppLinks (= 1.8.4)
+    - Bolts/Tasks (= 1.8.4)
+  - Bolts/AppLinks (1.8.4):
+    - Bolts/Tasks
+  - Bolts/Tasks (1.8.4)
+  - FacebookCore (0.2.0):
+    - Bolts (~> 1.8)
+    - FBSDKCoreKit (~> 4.15)
+  - FacebookLogin (0.2.0):
+    - Bolts (~> 1.8)
+    - FacebookCore (~> 0.2)
+    - FBSDKCoreKit (~> 4.15)
+    - FBSDKLoginKit (~> 4.15)
+  - FacebookShare (0.2.0):
+    - Bolts (~> 1.8)
+    - FacebookCore (~> 0.2)
+    - FBSDKCoreKit (~> 4.15)
+    - FBSDKShareKit (~> 4.15)
+  - FBSDKCoreKit (4.19.0):
+    - Bolts (~> 1.7)
+  - FBSDKLoginKit (4.19.0):
+    - FBSDKCoreKit
+  - FBSDKShareKit (4.19.0):
+    - FBSDKCoreKit
   - Realm (2.4.1):
     - Realm/Headers (= 2.4.1)
   - Realm/Headers (2.4.1)
@@ -9,15 +34,25 @@ PODS:
 
 DEPENDENCIES:
   - ALCameraViewController
+  - FacebookCore
+  - FacebookLogin
+  - FacebookShare
   - RealmSwift
   - Sharaku
 
 SPEC CHECKSUMS:
   ALCameraViewController: 4a513b8d5ecfdb3f34c50b1d469c373aae1ec7b4
+  Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
+  FacebookCore: 2cb3f0fbff218e9d3119cec84bae983b232412de
+  FacebookLogin: c9d606504735780a9e3002465a615512e0a691a5
+  FacebookShare: 8e9ee8ea06505e6a1d3d719b0cc63e840fb8aaeb
+  FBSDKCoreKit: 894b2b6eda6a4c8c4204e92e59cc355709ef045c
+  FBSDKLoginKit: 83ca4d8f12a2022570af9fd6aacf27f6b425b99f
+  FBSDKShareKit: 5953758366278430dc322d5cdc906db361ed7f81
   Realm: 37a5198a197598d9ec0e4d1ae2f64924c86eeb9a
   RealmSwift: d69e431b79a41acdf14c404b868ae1c2458916e1
   Sharaku: c18de569fc99f6e936f46ca812b571826cc658a7
 
-PODFILE CHECKSUM: 3837df5c0f0657c66ae037f1cf7341fa999856f1
+PODFILE CHECKSUM: e186fa71ec93feedc5f798bd99662ab78c55f577
 
 COCOAPODS: 1.2.0

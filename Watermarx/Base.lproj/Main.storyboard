@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="B2y-yj-66L">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="B2y-yj-66L">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -47,11 +48,40 @@
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="128.18590704647679"/>
         </scene>
+        <!--Login View Controller-->
+        <scene sceneID="Ql0-Gh-xVo">
+            <objects>
+                <viewController id="zju-rQ-MZI" customClass="LoginViewController" customModule="Watermarx" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yJt-9L-QMf"/>
+                        <viewControllerLayoutGuide type="bottom" id="VdQ-KR-fR9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ofu-AZ-1I2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="NKk-Kd-uiC">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="NKk-Kd-uiC" firstAttribute="leading" secondItem="Ofu-AZ-1I2" secondAttribute="leadingMargin" constant="-16" id="I9u-K8-Jkr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="NKk-Kd-uiC" secondAttribute="trailing" constant="-16" id="LIQ-WN-cNB"/>
+                            <constraint firstItem="NKk-Kd-uiC" firstAttribute="top" secondItem="yJt-9L-QMf" secondAttribute="bottom" constant="-20" id="eSp-yx-at2"/>
+                            <constraint firstItem="VdQ-KR-fR9" firstAttribute="top" secondItem="NKk-Kd-uiC" secondAttribute="bottom" id="jyR-TD-v2f"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dtR-FN-0ir" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-279.19999999999999" y="-584.25787106446785"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="ICg-hG-mRf">
             <objects>
                 <navigationController id="B2y-yj-66L" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="eIC-Mq-3Xt">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="eIC-Mq-3Xt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -64,4 +94,7 @@
             <point key="canvasLocation" x="-652" y="128"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Background" width="414" height="736"/>
+    </resources>
 </document>
