@@ -7,6 +7,7 @@
 //
 
 import ALCameraViewController
+import FacebookCore
 import Sharaku
 import UIKit
 
@@ -48,6 +49,11 @@ class IntroViewController: UIViewController {
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+
+        if AccessToken.current == nil {
+            let loginViewController = storyboard!.instantiateViewController(withIdentifier: "Login View Controller")
+            present(loginViewController, animated: false, completion: nil)
+        }
 
         if firstTime {
             firstTime = false

@@ -27,10 +27,6 @@
                                     <action selector="cameraButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="k5y-u3-76S"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DYT-XQ-iP0" customClass="FTImageGridView" customModule="FTImageViewer">
-                                <rect key="frame" x="16" y="72" width="343" height="557"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -41,7 +37,6 @@
                     <navigationItem key="navigationItem" title="Watermarx" id="Roj-SP-qwq"/>
                     <connections>
                         <outlet property="cameraButton" destination="adx-R9-ALG" id="lFA-ea-mOb"/>
-                        <outlet property="imageGridView" destination="DYT-XQ-iP0" id="nTd-y4-doU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -51,7 +46,7 @@
         <!--Login View Controller-->
         <scene sceneID="Ql0-Gh-xVo">
             <objects>
-                <viewController id="zju-rQ-MZI" customClass="LoginViewController" customModule="Watermarx" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Login View Controller" id="zju-rQ-MZI" customClass="LoginViewController" customModule="Watermarx" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="yJt-9L-QMf"/>
                         <viewControllerLayoutGuide type="bottom" id="VdQ-KR-fR9"/>
@@ -60,7 +55,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="NKk-Kd-uiC">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="NKk-Kd-uiC">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                         </subviews>
