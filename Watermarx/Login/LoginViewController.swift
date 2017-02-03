@@ -17,14 +17,33 @@ class LoginViewController: UIViewController {
 
         let loginButton = LoginButton(readPermissions: [.publicProfile])
 
+        loginButton.delegate = self
+
         view.addSubview(loginButton)
 
         loginButton.snp.makeConstraints { (make) -> Void in
-            make.width.equalTo(self.view).offset(-40)
             make.height.equalTo(44)
+            make.width.equalTo(self.view).offset(-44)
+
             make.centerX.equalTo(self.view)
-            make.bottom.equalTo(self.view).offset(-20)
+            make.bottom.equalTo(self.view).offset(-22)
         }
+    }
+
+}
+
+extension LoginViewController: LoginButtonDelegate {
+
+    func loginButtonDidCompleteLogin(_ loginButton: LoginButton, result: LoginResult) {
+        print("Logged In")
+
+        dismiss(animated: true, completion: nil)
+
+        print(result)
+    }
+
+    func loginButtonDidLogOut(_ loginButton: LoginButton) {
+        print("Logged Out")
     }
 
 }

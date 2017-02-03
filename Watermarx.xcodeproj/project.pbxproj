@@ -18,7 +18,8 @@
 
 /* Begin PBXFileReference section */
 		299057E258B23C29E1364199 /* Pods-Watermarx.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Watermarx.release.xcconfig"; path = "Pods/Target Support Files/Pods-Watermarx/Pods-Watermarx.release.xcconfig"; sourceTree = "<group>"; };
-		8431629F1E39F7A6002D7EF3 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Login/LoginViewController.swift; sourceTree = "<group>"; };
+		8431629F1E39F7A6002D7EF3 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		84CDFE801E44C34D000B0085 /* Watermarx-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Watermarx-Bridging-Header.h"; sourceTree = "<group>"; };
 		84F1090A1E35C48A00DB28B4 /* Watermarx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Watermarx.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84F1090D1E35C48A00DB28B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84F1090F1E35C48A00DB28B4 /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
@@ -64,7 +65,7 @@
 			children = (
 				8431629F1E39F7A6002D7EF3 /* LoginViewController.swift */,
 			);
-			name = Login;
+			path = Login;
 			sourceTree = "<group>";
 		};
 		84BA17121E35C85D00063BEF /* Misc */ = {
@@ -106,11 +107,12 @@
 		84F1090C1E35C48A00DB28B4 /* Watermarx */ = {
 			isa = PBXGroup;
 			children = (
-				8431629E1E39F78A002D7EF3 /* Login */,
 				84BA17131E35C89A00063BEF /* Intro */,
+				8431629E1E39F78A002D7EF3 /* Login */,
 				84BA17121E35C85D00063BEF /* Misc */,
 				84F109141E35C49100DB28B4 /* Assets.xcassets */,
 				84F109111E35C49100DB28B4 /* Main.storyboard */,
+				84CDFE801E44C34D000B0085 /* Watermarx-Bridging-Header.h */,
 			);
 			path = Watermarx;
 			sourceTree = "<group>";
@@ -151,6 +153,7 @@
 					84F109091E35C48A00DB28B4 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = CYHAB4D9WS;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -367,12 +370,15 @@
 			baseConfigurationReference = AD41D7ADD6CA0781BAD2B817 /* Pods-Watermarx.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = CYHAB4D9WS;
 				INFOPLIST_FILE = "$(SRCROOT)/Watermarx/Misc/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.logiworks.watermarx;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Watermarx/Watermarx-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -382,12 +388,14 @@
 			baseConfigurationReference = 299057E258B23C29E1364199 /* Pods-Watermarx.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = CYHAB4D9WS;
 				INFOPLIST_FILE = "$(SRCROOT)/Watermarx/Misc/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.logiworks.watermarx;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Watermarx/Watermarx-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

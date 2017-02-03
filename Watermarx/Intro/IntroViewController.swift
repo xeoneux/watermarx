@@ -53,9 +53,7 @@ class IntroViewController: UIViewController {
         if AccessToken.current == nil {
             let loginViewController = storyboard!.instantiateViewController(withIdentifier: "Login View Controller")
             present(loginViewController, animated: false, completion: nil)
-        }
-
-        if firstTime {
+        } else if firstTime {
             firstTime = false
             cameraButtonTapped(self)
         }
